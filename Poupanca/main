@@ -1,0 +1,30 @@
+package com.example.poupanca;
+
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+    private EditText edtValorInicial;
+    private EditText edtMensal;
+    private EditText edtAplicacao;
+    private EditText edtTaxa;
+    private Button btnCalcular;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
+
+        //Ligando Java ao Layout
+        edtValorInicial = findViewById(R.id.edtValorInicial);
+        edtMensal = findViewById(R.id.edtMensal);
+        edtAplicacao = findViewById(R.id.edtAplicacao);
+        edtTaxa = findViewById(R.id.edtTaxa);
+        btnCalcular = findViewById(R.id.btnCalcular);
+    }
+}
