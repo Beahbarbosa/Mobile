@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#211F1F"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            app:srcCompat="@drawable/pizzaria" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:gravity="center"
+            android:text="Escolha seu sabor e quantidade"
+            android:textColor="#F0EFEF"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="225dp"
+                android:layout_height="111dp"
+                app:srcCompat="@drawable/pizza1" />
+
+            <TextView
+                android:id="@+id/edtPizzaA"
+                android:layout_width="224dp"
+                android:layout_height="wrap_content"
+                android:background="#DE5858"
+                android:gravity="center"
+                android:text="Quantidade:"
+                android:textColor="#B6B2B2"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="227dp"
+                android:layout_height="108dp"
+                app:srcCompat="@drawable/pizza2" />
+
+            <TextView
+                android:id="@+id/edtPizzaB"
+                android:layout_width="231dp"
+                android:layout_height="wrap_content"
+                android:background="#DE5858"
+                android:gravity="center"
+                android:text="Quantidade:"
+                android:textColor="#ABA9A9"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="228dp"
+                android:layout_height="111dp"
+                app:srcCompat="@drawable/pizza33" />
+
+            <TextView
+                android:id="@+id/edtPizzaC"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:background="#DE5858"
+                android:gravity="center"
+                android:text="Quantidade:"
+                android:textColor="#BDBABA"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="231dp"
+                android:layout_height="136dp"
+                app:srcCompat="@drawable/pizza4" />
+
+            <TextView
+                android:id="@+id/edtPizzaD"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:background="#DE5858"
+                android:gravity="center"
+                android:text="Quantidade:"
+                android:textColor="#C3C1C1"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnPedido"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="#4BDC6649"
+                android:backgroundTint="#F44336"
+                android:shadowColor="#F0F0F0"
+                android:text="Fazer Pedido"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
