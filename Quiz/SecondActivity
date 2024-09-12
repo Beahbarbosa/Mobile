@@ -1,0 +1,60 @@
+
+package br.edu.quizapp;
+
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.TextView;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class SecondActivity extends AppCompatActivity implements View.OnClickListener{
+    private EditText total_question;
+    private RadioButton edtOpcaoA;
+    private RadioButton edtOpcaoB;
+    private RadioButton edtOpcaoC;
+    private RadioButton edtOpcaoD;
+    private Button btnEnviar;
+
+    int score=0;
+    int totalQuestion=Questoes.question.length;
+    int currentQuestionIndex=0;
+    String selectAnswer="";
+
+
+
+    @SuppressLint("MissingInflatedId")
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_second);
+
+        //Ligando Java ao Layout
+        totalQuestionTextView = findViewById(R.id.total_question);
+        edtOpcaoA = findViewById(R.id.edtOpcaoA);
+        edtOpcaoB = findViewById(R.id.edtOpcaoB);
+        edtOpcaoC = findViewById(R.id.edtOpcaoC);
+        edtOpcaoD = findViewById(R.id.edtOpcaoD);
+        btnEnviar = findViewById(R.id.btnEnviar);
+
+        edtOpcaoA.setOnClickListener(this);
+        edtOpcaoB.setOnClickListener(this);
+        edtOpcaoC.setOnClickListener(this);
+        edtOpcaoD.setOnClickListener(this);
+        btnEnviar.setOnClickListener(this);
+
+        totalQuestionTextView.setText("Total de perg")
+    }
+
+    @Override
+    public void onClick(View view) {
+
+    }
+}
+
+
