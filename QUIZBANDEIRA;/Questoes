@@ -1,0 +1,48 @@
+package br.edu.quizapp;
+
+import java.io.OptionalDataException;
+
+public class Questoes {
+
+    public static OptionalDataException question;
+    public String Questao[] = {
+
+            "Que País é esse?",
+            "Que País é esse?",
+            "Que País é esse?",
+            "Que País é esse?",
+            "Que País é esse?",
+            "Que País é esse?",
+            "Que País é esse?",
+            "Que País é esse?",
+            "Que País é esse?",
+            "Que País é esse?"
+
+    };
+
+    public String Respostas[][] = {
+
+            {"Irã", "Bulgária", "Guatemala", "Egito"},
+            {"Brasil", "Gabão", "Jamaica", "Ruanda"},
+            {"Suíça", "Inglaterra", "Canadá", "Dinamarca"},
+            {"Vietnã", "Tailândia", "Angola", "China"},
+            {"Coréia do Norte", "Eslováquia", "Coréia do Sul", "Malásia"},
+            {"Cuba", "Porto Rico", "Chile", "Costa Rica"},
+            {"Argentina", "Guatemala", "Honduras", "El Salvador"},
+            {"Itália", "Bulgária", "Irlanda", "Hungria"},
+            {"Itália", "México", "Irã", "Sudão"},
+            {"Libéria", "Nova Zelândia", "Reino Unido", "Estados Unidos"};
+    public String RespostasCorretas[] = {
+            "Bulgária",
+            "Brasil",
+            "Canadá",
+            "China",
+            "Coréia do Sul",
+            "Cuba",
+            "Guatemala",
+            "Hungria",
+            "Itália",
+            "Estados Unidos"
+    };
+}
+
