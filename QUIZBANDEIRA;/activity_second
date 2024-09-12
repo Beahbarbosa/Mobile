@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:backgroundTint="#F44336"
+    tools:context=".SecondActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/total_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="Total Questions"
+            android:textColor="#EDE6E6"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="Que País é este?"
+            android:textColor="#E0D9D9"
+            android:textSize="34sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            app:srcCompat="@drawable/bulgaria" />
+
+        <RadioButton
+            android:id="@+id/edtOpcaoA"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:fontFamily="@font/roboto"
+            android:shadowColor="#3F51B5"
+            android:text="Irã"
+            android:textColor="#E9E8E8"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/edtOpcaoB"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:fontFamily="@font/roboto"
+            android:text="Bulgaria"
+            android:textColor="#E6E2E2"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/edtOpcaoC"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:fontFamily="@font/roboto"
+            android:text="Guatemala"
+            android:textColor="#E4DEDE"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/edtOpcaoD"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:fontFamily="@font/roboto"
+            android:text="Egito"
+            android:textColor="#D9D4D4"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnEnviar"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#E91E63"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="Enviar"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
