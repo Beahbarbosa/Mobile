@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="161dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="Bem-vindo(a) ao"
+            android:textColor="#F4F2F2"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/edtTexto"
+            android:layout_width="match_parent"
+            android:layout_height="126dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="Insira seu nome:"
+            android:textColor="#F6F6F6"
+            android:textSize="34sp" />
+
+        <EditText
+            android:id="@+id/edtNome"
+            android:layout_width="278dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:background="#0F5E68"
+            android:backgroundTint="#27B0C1"
+            android:ems="10"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:inputType="text"
+            android:shadowColor="#673AB7"
+            android:text="Nome:"
+            android:textAlignment="viewStart"
+            android:textColor="#FFFEFE"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="142dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnComecar"
+                android:layout_width="245dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:backgroundTint="#9C27B0"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="Começar"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
