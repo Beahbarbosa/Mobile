@@ -1,11 +1,13 @@
-package br.edu.quizapp;
+package com.example.quizapp;
 
 import java.io.OptionalDataException;
 
-public class Questoes {
+public class QuestionAnswer {
 
-    public static OptionalDataException question;
-    public String Questao[] = {
+
+    public static int[][] choices;
+
+    public static String question[] ={
 
             "Que País é esse?",
             "Que País é esse?",
@@ -20,7 +22,7 @@ public class Questoes {
 
     };
 
-    public String Respostas[][] = {
+    public  static String choiches[][] = {
 
             {"Irã", "Bulgária", "Guatemala", "Egito"},
             {"Brasil", "Gabão", "Jamaica", "Ruanda"},
@@ -31,8 +33,10 @@ public class Questoes {
             {"Argentina", "Guatemala", "Honduras", "El Salvador"},
             {"Itália", "Bulgária", "Irlanda", "Hungria"},
             {"Itália", "México", "Irã", "Sudão"},
-            {"Libéria", "Nova Zelândia", "Reino Unido", "Estados Unidos"};
-    public String RespostasCorretas[] = {
+            {"Libéria", "Nova Zelândia", "Reino Unido", "Estados Unidos"},
+    };
+
+    public static String[] correctAnswers = {
             "Bulgária",
             "Brasil",
             "Canadá",
@@ -45,4 +49,3 @@ public class Questoes {
             "Estados Unidos"
     };
 }
-
