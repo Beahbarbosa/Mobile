@@ -26,10 +26,10 @@
             android:textSize="48sp" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/question"
             android:layout_width="match_parent"
             android:layout_height="71dp"
-            android:fontFamily="@font/roboto"
+            android:fontFamily="@font/roboto_medium"
             android:gravity="center"
             android:text="Que País é este?"
             android:textColor="#E0D9D9"
@@ -45,7 +45,7 @@
             android:id="@+id/edtOpcaoA"
             android:layout_width="match_parent"
             android:layout_height="69dp"
-            android:fontFamily="@font/roboto"
+            android:fontFamily="@font/roboto_medium"
             android:shadowColor="#3F51B5"
             android:text="Irã"
             android:textColor="#E9E8E8"
@@ -55,7 +55,7 @@
             android:id="@+id/edtOpcaoB"
             android:layout_width="match_parent"
             android:layout_height="62dp"
-            android:fontFamily="@font/roboto"
+            android:fontFamily="@font/roboto_medium"
             android:text="Bulgaria"
             android:textColor="#E6E2E2"
             android:textSize="24sp" />
@@ -64,7 +64,7 @@
             android:id="@+id/edtOpcaoC"
             android:layout_width="match_parent"
             android:layout_height="61dp"
-            android:fontFamily="@font/roboto"
+            android:fontFamily="@font/roboto_medium"
             android:text="Guatemala"
             android:textColor="#E4DEDE"
             android:textSize="24sp" />
@@ -73,7 +73,7 @@
             android:id="@+id/edtOpcaoD"
             android:layout_width="match_parent"
             android:layout_height="68dp"
-            android:fontFamily="@font/roboto"
+            android:fontFamily="@font/roboto_medium"
             android:text="Egito"
             android:textColor="#D9D4D4"
             android:textSize="24sp" />
