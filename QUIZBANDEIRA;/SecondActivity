@@ -1,7 +1,8 @@
 
-package br.edu.quizapp;
+package com.example.quizapp;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,10 +11,15 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.OptionalDataException;
+
 public class SecondActivity extends AppCompatActivity implements View.OnClickListener{
-    private EditText total_question;
+    TextView totalQuestionsTextView;
+    private EditText question;
+    TextView questionTextView;
     private RadioButton edtOpcaoA;
     private RadioButton edtOpcaoB;
     private RadioButton edtOpcaoC;
@@ -21,7 +27,7 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
     private Button btnEnviar;
 
     int score=0;
-    int totalQuestion=Questoes.question.length;
+    int totalQuestion = QuestionAnswer.question.length;
     int currentQuestionIndex=0;
     String selectAnswer="";
 
@@ -35,7 +41,8 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_second);
 
         //Ligando Java ao Layout
-        totalQuestionTextView = findViewById(R.id.total_question);
+        totalQuestionsTextView = findViewById(R.id.total_question);
+        questionTextView = findViewById(R.id.question);
         edtOpcaoA = findViewById(R.id.edtOpcaoA);
         edtOpcaoB = findViewById(R.id.edtOpcaoB);
         edtOpcaoC = findViewById(R.id.edtOpcaoC);
@@ -48,13 +55,71 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         edtOpcaoD.setOnClickListener(this);
         btnEnviar.setOnClickListener(this);
 
-        totalQuestionTextView.setText("Total de perg")
+        totalQuestionsTextView.setText("Total de perguntas: " + totalQuestion);
+        
+        loadNewQuestion();
+    }
+
+    private void loadNewQuestion() {
+
+        if(currentQuestionIndex == totalQuestion){
+            finishQuiz();
+            return;
+        }
+
+        questionTextView.setText(QuestionAnswer.question[currentQuestionIndex]);
+        edtOpcaoA.setText(QuestionAnswer.choices[currentQuestionIndex][0]);
+        edtOpcaoB.setText(QuestionAnswer.choices[currentQuestionIndex][1]);
+        edtOpcaoC.setText(QuestionAnswer.choices[currentQuestionIndex][2]);
+        edtOpcaoD.setText(QuestionAnswer.choices[currentQuestionIndex][3]);
+
+    }
+
+    private void finishQuiz() {
+        String passStatus="";
+        if(score >totalQuestion*0.60){
+            passStatus="Parábens";
+        }else{
+            passStatus="Muito Ruim";
+        }
+
+        new AlertDialog.Builder(this)
+                .setTitle(passStatus)
+                .setMessage("Sua pontuação foi:" + score+ "de" + totalQuestion)
+                .setPositiveButton(Integer.parseInt("Restaurar"),(dialogInterface, i) -> restartQuiz())
+                .setCancelable(false)
+                .show();
+    }
+
+
+    private void restartQuiz() {
+        score=0;
+        currentQuestionIndex=0;
+        loadNewQuestion();
     }
 
     @Override
     public void onClick(View view) {
 
+        edtOpcaoA.setBackgroundColor(Color.WHITE);
+        edtOpcaoB.setBackgroundColor(Color.WHITE);
+        edtOpcaoC.setBackgroundColor(Color.WHITE);
+        edtOpcaoD.setBackgroundColor(Color.WHITE);
+
+
+        Button clickedButton = (Button) view;
+        if (clickedButton.getId()==R.id.btnEnviar){
+            currentQuestionIndex++;
+            loadNewQuestion();
+            if(selectAnswer.equals(QuestionAnswer.correctAnswers[currentQuestionIndex])){
+                score++;
+            }
+
+        }else{
+            ///Botao enquanto clica
+            selectAnswer= clickedButton.getText().toString();
+            clickedButton.setBackgroundColor(Color.GREEN);
+        }
+
     }
 }
-
-
